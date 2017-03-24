@@ -9,3 +9,8 @@ body{
 	height: 100%;
 	background-repeat: no-repeat;
 }
+
+/*INCREASE SPECIFICITY...*/
+.ui.column.feelings{
+	display: inline;
+}
