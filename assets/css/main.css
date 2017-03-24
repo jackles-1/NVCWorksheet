@@ -1,0 +1,11 @@
+html{
+	min-height: 100%;
+}
+
+body{
+	background-image: url(../img/pololu.jpg);
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+	background-repeat: no-repeat;
+}
