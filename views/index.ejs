@@ -1,0 +1,225 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>NVC Worksheet</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+<body>
+
+	<!--<div class="ui justified container">-->
+		<h1 class="ui huge header">
+			<i class="empty heart icon"></i>
+			<div class="content">
+				NVC Worksheet
+			</div>
+		</h1>
+
+		<div class="ui segments">
+			<h3 class="ui top attached header">How do you feel?</h3>
+			<div class="ui attached segment">
+				<div class="ui nine column grid">
+					<div class="column">
+						<% feelings.forEach(function(feeling){ %>
+						    <% if(feeling.category === "sad"){ %>
+						        <div class="column">
+									<div class="ui small basic icon buttons">
+										<button class="ui icon button selectFeeling">
+											<i class="radio icon"></i>
+										</button>
+										<button class="ui icon button defineFeeling">
+											<i class="book icon"></i>
+										</button>
+									</div>
+									<%= feeling.word %>
+								</div>
+						    <% } %>
+						<% }); %>
+					</div>
+					<div class="column">
+						<% feelings.forEach(function(feeling){ %>
+						    <% if(feeling.category === "mad"){ %>
+						        <div class="column">
+									<div class="ui small basic icon buttons">
+										<button class="ui icon button selectFeeling">
+											<i class="radio icon"></i>
+										</button>
+										<button class="ui icon button defineFeeling">
+											<i class="book icon"></i>
+										</button>
+									</div>
+									<%= feeling.word %>
+								</div>
+						    <% } %>
+						<% }); %>
+					</div>
+					<div class="column">
+						<% feelings.forEach(function(feeling){ %>
+						    <% if(feeling.category === "scared"){ %>
+						        <div class="column">
+									<div class="ui small basic icon buttons">
+										<button class="ui icon button selectFeeling">
+											<i class="radio icon"></i>
+										</button>
+										<button class="ui icon button defineFeeling">
+											<i class="book icon"></i>
+										</button>
+									</div>
+									<%= feeling.word %>
+								</div>
+						    <% } %>
+						<% }); %>
+					</div>
+					<div class="column">
+						<% feelings.forEach(function(feeling){ %>
+						    <% if(feeling.category === "ignored"){ %>
+						        <div class="column">
+									<div class="ui small basic icon buttons">
+										<button class="ui icon button selectFeeling">
+											<i class="radio icon"></i>
+										</button>
+										<button class="ui icon button defineFeeling">
+											<i class="book icon"></i>
+										</button>
+									</div>
+									<%= feeling.word %>
+								</div>
+						    <% } %>
+						<% }); %>
+					</div>
+					<div class="column">
+						<% feelings.forEach(function(feeling){ %>
+						    <% if(feeling.category === "bad"){ %>
+						        <div class="column">
+									<div class="ui small basic icon buttons">
+										<button class="ui icon button selectFeeling">
+											<i class="radio icon"></i>
+										</button>
+										<button class="ui icon button defineFeeling">
+											<i class="book icon"></i>
+										</button>
+									</div>
+									<%= feeling.word %>
+								</div>
+						    <% } %>
+						<% }); %>
+					</div>
+					<div class="column">
+						<% feelings.forEach(function(feeling){ %>
+						    <% if(feeling.category === "joyful"){ %>
+						        <div class="column">
+									<div class="ui small basic icon buttons">
+										<button class="ui icon button selectFeeling">
+											<i class="radio icon"></i>
+										</button>
+										<button class="ui icon button defineFeeling">
+											<i class="book icon"></i>
+										</button>
+									</div>
+									<%= feeling.word %>
+								</div>
+						    <% } %>
+						<% }); %>
+					</div>
+					<div class="column">
+						<% feelings.forEach(function(feeling){ %>
+						    <% if(feeling.category === "powerful"){ %>
+						        <div class="column">
+									<div class="ui small basic icon buttons">
+										<button class="ui icon button selectFeeling">
+											<i class="radio icon"></i>
+										</button>
+										<button class="ui icon button defineFeeling">
+											<i class="book icon"></i>
+										</button>
+									</div>
+									<%= feeling.word %>
+								</div>
+						    <% } %>
+						<% }); %>
+					</div>
+					<div class="column">
+						<% feelings.forEach(function(feeling){ %>
+						    <% if(feeling.category === "peaceful"){ %>
+						        <div class="column">
+									<div class="ui small basic icon buttons">
+										<button class="ui icon button selectFeeling">
+											<i class="radio icon"></i>
+										</button>
+										<button class="ui icon button defineFeeling">
+											<i class="book icon"></i>
+										</button>
+									</div>
+									<%= feeling.word %>
+								</div>
+						    <% } %>
+						<% }); %>
+					</div>
+					<div class="column">
+						<% feelings.forEach(function(feeling){ %>
+						    <% if(feeling.category === "good"){ %>
+						        <div class="column">
+									<div class="ui small basic icon buttons">
+										<button class="ui icon button selectFeeling">
+											<i class="radio icon"></i>
+										</button>
+										<button class="ui icon button defineFeeling">
+											<i class="book icon"></i>
+										</button>
+									</div>
+									<%= feeling.word %>
+								</div>
+						    <% } %>
+						<% }); %>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="ui segments">
+			<h3 class="ui attached header">When do you feel this way?</h3>
+			<div class="ui attached segment">
+				<!-- NVC p 52 -->
+			</div>
+		</div>
+
+		<div class="ui segments">
+			<h3 class="ui attached header">Why do you feel this way?</h3>
+			<div class="ui attached segment">
+				<!-- NVC p 52, 57-->
+			</div>
+		</div>
+
+		<div class="ui segments">
+			<h3 class="ui attached header">What do you need?</h3>
+			<div class="ui attached segment">
+				<!-- NVC p 55		 -->
+			</div>
+		</div>
+
+		<div class="ui segments">
+			<h3 class="ui attached header">What do you request?</h3>
+			<div class="ui attached segment">
+				<!-- NVC notes from Requests chapter -->
+			</div>
+		</div>		
+
+		<div class="ui large header">
+			<i class="heart icon"></i>
+			<div class="content">
+				Your Statement
+			</div>
+			</h2>
+			<div class="ui purple segment">
+				Here it is.
+			</div>
+		</div>
+			
+	<!--</div>-->
+		
+<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.js"></script>
+<script type="text/javascript" src="assets/js/main.js"></script>
+
+</body>
+</html>

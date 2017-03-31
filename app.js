@@ -1,7 +1,11 @@
+// NPM Packages
 var express = require("express"),
 	app = express(),
 	bodyParser = require("body-parser"),
-	mongoose = require("mongoose");
+	mongoose = require("mongoose"),
+// Models
+	Feeling = require("./models/feeling"),
+	seedDB = require("./seeds");
 
 mongoose.connect("mongodb://localhost/nvc");
 
@@ -11,14 +15,24 @@ app.use(express.static(__dirname + "/public"));
 
 app.set("view engine", "ejs");
 
+seedDB();
 
+
+// ROUTES
 
 app.get("/", function(req, res){
-	res.send("Hello World");
+	Feeling.find({}, function(err, feelings){
+		if(err){
+			console.log("Error in root route.");
+		}	
+		else{
+			res.render("index", {feelings: feelings});
+		}
+	});
 });
 
 
-
-app.listen(3000, function(){
+// Listener
+app.listen(process.env.PORT, process.env.IP, function(){
     console.log("The server has started.");
 });
