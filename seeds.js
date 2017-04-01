@@ -511,6 +511,521 @@ var data = [
             word: "nauseated",
             definition: "", 
             category: "scared"
+        },       
+        {
+            word: "joyful",
+            definition: "", 
+            category: "joyful"
+        },       
+        {
+            word: "excited",
+            definition: "", 
+            category: "joyful"
+        },       
+        {
+            word: "daring",
+            definition: "", 
+            category: "joyful"
+        },       
+        {
+            word: "elated",
+            definition: "", 
+            category: "joyful"
+        },       
+        {
+            word: "boastful",
+            definition: "", 
+            category: "joyful"
+        },       
+        {
+            word: "ecstatic",
+            definition: "", 
+            category: "joyful"
+        },       
+        {
+            word: "sexy",
+            definition: "", 
+            category: "joyful"
+        },       
+        {
+            word: "sensual",
+            definition: "", 
+            category: "joyful"
+        },       
+        {
+            word: "seductive",
+            definition: "", 
+            category: "joyful"
+        },       
+        {
+            word: "irresistible",
+            definition: "", 
+            category: "joyful"
+        },       
+        {
+            word: "energetic",
+            definition: "", 
+            category: "joyful"
+        },       
+        {
+            word: "competitive",
+            definition: "", 
+            category: "joyful"
+        },       
+        {
+            word: "exercised",
+            definition: "", 
+            category: "joyful"
+        },       
+        {
+            word: "stimulating",
+            definition: "", 
+            category: "joyful"
+        },       
+        {
+            word: "playful",
+            definition: "", 
+            category: "joyful"
+        },       
+        {
+            word: "amused",
+            definition: "", 
+            category: "joyful"
+        },       
+        {
+            word: "tickled",
+            definition: "", 
+            category: "joyful"
+        },       
+        {
+            word: "eager",
+            definition: "", 
+            category: "joyful"
+        },       
+        {
+            word: "talkative",
+            definition: "", 
+            category: "joyful"
+        },       
+        {
+            word: "curious",
+            definition: "", 
+            category: "joyful"
+        },       
+        {
+            word: "mischievous",
+            definition: "", 
+            category: "joyful"
+        },       
+        {
+            word: "creative",
+            definition: "", 
+            category: "joyful"
+        },       
+        {
+            word: "extravagant",
+            definition: "", 
+            category: "joyful"
+        },       
+        {
+            word: "enhanced",
+            definition: "", 
+            category: "joyful"
+        },       
+        {
+            word: "inspired",
+            definition: "", 
+            category: "joyful"
+        },       
+        {
+            word: "funny",
+            definition: "", 
+            category: "joyful"
+        },       
+        {
+            word: "aware",
+            definition: "", 
+            category: "joyful"
+        },       
+        {
+            word: "delightful",
+            definition: "", 
+            category: "joyful"
+        },       
+        {
+            word: "delighted",
+            definition: "", 
+            category: "joyful"
+        },       
+        {
+            word: "impressed",
+            definition: "", 
+            category: "joyful"
+        },       
+        {
+            word: "powerful",
+            definition: "", 
+            category: "powerful"
+        },       
+        {
+            word: "proud",
+            definition: "", 
+            category: "powerful"
+        },       
+        {
+            word: "cheerful",
+            definition: "", 
+            category: "powerful"
+        },       
+        {
+            word: "enthusiastic",
+            definition: "", 
+            category: "powerful"
+        },       
+        {
+            word: "euphoric",
+            definition: "", 
+            category: "powerful"
+        },       
+        {
+            word: "triumphant",
+            definition: "", 
+            category: "powerful"
+        },       
+        {
+            word: "bright",
+            definition: "", 
+            category: "powerful"
+        },       
+        {
+            word: "respected",
+            definition: "", 
+            category: "powerful"
+        },       
+        {
+            word: "satisfied",
+            definition: "", 
+            category: "powerful"
+        },       
+        {
+            word: "sophisticated",
+            definition: "", 
+            category: "powerful"
+        },       
+        {
+            word: "efficient",
+            definition: "", 
+            category: "powerful"
+        },       
+        {
+            word: "smug",
+            definition: "", 
+            category: "powerful"
+        },       
+        {
+            word: "assertive",
+            definition: "", 
+            category: "powerful"
+        },       
+        {
+            word: "adequate",
+            definition: "", 
+            category: "powerful"
+        },       
+        {
+            word: "strong",
+            definition: "", 
+            category: "powerful"
+        },       
+        {
+            word: "appreciated",
+            definition: "", 
+            category: "powerful"
+        },       
+        {
+            word: "valuable",
+            definition: "", 
+            category: "powerful"
+        },       
+        {
+            word: "supported",
+            definition: "", 
+            category: "powerful"
+        },       
+        {
+            word: "liked",
+            definition: "", 
+            category: "powerful"
+        },       
+        {
+            word: "accepted",
+            definition: "", 
+            category: "powerful"
+        },       
+        {
+            word: "hopeful",
+            definition: "", 
+            category: "powerful"
+        },       
+        {
+            word: "worthwhile",
+            definition: "", 
+            category: "powerful"
+        },       
+        {
+            word: "positive",
+            definition: "", 
+            category: "powerful"
+        },       
+        {
+            word: "expectant",
+            definition: "", 
+            category: "powerful"
+        },       
+        {
+            word: "surprised",
+            definition: "", 
+            category: "powerful"
+        },       
+        {
+            word: "esteem",
+            definition: "", 
+            category: "powerful"
+        },       
+        {
+            word: "important",
+            definition: "", 
+            category: "powerful"
+        },       
+        {
+            word: "intelligent",
+            definition: "", 
+            category: "powerful"
+        },       
+        {
+            word: "successful",
+            definition: "", 
+            category: "powerful"
+        },       
+        {
+            word: "noble",
+            definition: "", 
+            category: "powerful"
+        },       
+        {
+            word: "assured",
+            definition: "", 
+            category: "powerful"
+        },       
+        {
+            word: "superior",
+            definition: "", 
+            category: "powerful"
+        },       
+        {
+            word: "faithful",
+            definition: "", 
+            category: "powerful"
+        },       
+        {
+            word: "confident",
+            definition: "", 
+            category: "powerful"
+        },       
+        {
+            word: "open",
+            definition: "", 
+            category: "powerful"
+        },       
+        {
+            word: "helpful",
+            definition: "", 
+            category: "powerful"
+        },       
+        {
+            word: "peaceful",
+            definition: "", 
+            category: "peaceful"
+        },       
+        {
+            word: "nurturing",
+            definition: "", 
+            category: "peaceful"
+        },       
+        {
+            word: "compassionate",
+            definition: "", 
+            category: "peaceful"
+        },       
+        {
+            word: "thankful",
+            definition: "", 
+            category: "peaceful"
+        },       
+        {
+            word: "grateful",
+            definition: "", 
+            category: "peaceful"
+        },       
+        {
+            word: "kind",
+            definition: "", 
+            category: "peaceful"
+        },       
+        {
+            word: "tender",
+            definition: "", 
+            category: "peaceful"
+        },       
+        {
+            word: "trusting",
+            definition: "", 
+            category: "peaceful"
+        },       
+        {
+            word: "nostalgic",
+            definition: "", 
+            category: "peaceful"
+        },       
+        {
+            word: "sentimental",
+            definition: "", 
+            category: "peaceful"
+        },       
+        {
+            word: "secure",
+            definition: "", 
+            category: "peaceful"
+        },       
+        {
+            word: "safe",
+            definition: "", 
+            category: "peaceful"
+        },       
+        {
+            word: "loving",
+            definition: "", 
+            category: "peaceful"
+        },       
+        {
+            word: "serene",
+            definition: "", 
+            category: "peaceful"
+        },       
+        {
+            word: "warm",
+            definition: "", 
+            category: "peaceful"
+        },       
+        {
+            word: "infatuated",
+            definition: "", 
+            category: "peaceful"
+        },       
+        {
+            word: "lovable",
+            definition: "", 
+            category: "peaceful"
+        },       
+        {
+            word: "loved",
+            definition: "", 
+            category: "peaceful"
+        },       
+        {
+            word: "glowing",
+            definition: "", 
+            category: "peaceful"
+        },       
+        {
+            word: "affectionate",
+            definition: "", 
+            category: "peaceful"
+        },       
+        {
+            word: "love-struck",
+            definition: "", 
+            category: "peaceful"
+        },       
+        {
+            word: "intimated",
+            definition: "", 
+            category: "peaceful"
+        },       
+        {
+            word: "responsive",
+            definition: "", 
+            category: "peaceful"
+        },       
+        {
+            word: "close",
+            definition: "", 
+            category: "peaceful"
+        },       
+        {
+            word: "involved",
+            definition: "", 
+            category: "peaceful"
+        },       
+        {
+            word: "attached",
+            definition: "", 
+            category: "peaceful"
+        },       
+        {
+            word: "thoughtful",
+            definition: "", 
+            category: "peaceful"
+        },       
+        {
+            word: "pensive",
+            definition: "", 
+            category: "peaceful"
+        },       
+        {
+            word: "relaxed",
+            definition: "", 
+            category: "peaceful"
+        },       
+        {
+            word: "transcended",
+            definition: "", 
+            category: "peaceful"
+        },       
+        {
+            word: "clarity",
+            definition: "", 
+            category: "peaceful"
+        },       
+        {
+            word: "contented",
+            definition: "", 
+            category: "peaceful"
+        },       
+        {
+            word: "satisfied",
+            definition: "", 
+            category: "peaceful"
+        },       
+        {
+            word: "comfortable",
+            definition: "", 
+            category: "peaceful"
+        },       
+        {
+            word: "relieved",
+            definition: "", 
+            category: "peaceful"
+        },       
+        {
+            word: "happy",
+            definition: "", 
+            category: "peaceful"
+        },       
+        {
+            word: "mellow",
+            definition: "", 
+            category: "peaceful"
         },
         // FILLER WORDS--OUT OF ORDER
         {
@@ -527,21 +1042,7 @@ var data = [
             word: "glorious",
             definition: "", 
             category: "good"
-        },
-        {
-            word: "joyful",
-            definition: "", 
-            category: "joyful"
-        },
-        {
-            word: "powerful",
-            definition: "", 
-            category: "powerful"
-        },
-        {
-            word: "peaceful",
-            definition: "", 
-            category: "peaceful"}
+        }
     ]
     
 function seedDB(){
