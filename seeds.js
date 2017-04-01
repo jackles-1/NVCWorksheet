@@ -1,6 +1,8 @@
 var mongoose = require("mongoose");
 var Feeling = require("./models/feeling");
 
+// Possible groups: good, bad, sad, scared, ignored, peaceful
+
 var data = [
         {
             word: "sad",

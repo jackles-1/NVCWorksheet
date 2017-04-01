@@ -18,10 +18,10 @@
 		<div class="ui segments">
 			<h3 class="ui top attached header">How do you feel?</h3>
 			<div class="ui attached segment">
-				<div class="ui nine column grid">
+				<div class="ui six column grid">
 					<div class="column">
 						<% feelings.forEach(function(feeling){ %>
-						    <% if(feeling.category === "sad"){ %>
+						    <% if(feeling.category === "bad"){ %>
 						        <div class="column">
 									<div class="ui small basic icon buttons">
 										<button class="ui icon button selectFeeling">
@@ -29,6 +29,12 @@
 										</button>
 										<button class="ui icon button defineFeeling">
 											<i class="book icon"></i>
+											<div class="ui modal <%= feeling.word %>">
+												<div class="header"><%= feeling.word %></div>
+												<div class="content">
+												<p><%= feeling.definition %>I'm the definition!</p>
+												</div>
+											</div>
 										</button>
 									</div>
 									<%= feeling.word %>
@@ -38,7 +44,7 @@
 					</div>
 					<div class="column">
 						<% feelings.forEach(function(feeling){ %>
-						    <% if(feeling.category === "mad"){ %>
+						    <% if(feeling.category === "sad"){ %>
 						        <div class="column">
 									<div class="ui small basic icon buttons">
 										<button class="ui icon button selectFeeling">
@@ -89,41 +95,7 @@
 					</div>
 					<div class="column">
 						<% feelings.forEach(function(feeling){ %>
-						    <% if(feeling.category === "bad"){ %>
-						        <div class="column">
-									<div class="ui small basic icon buttons">
-										<button class="ui icon button selectFeeling">
-											<i class="radio icon"></i>
-										</button>
-										<button class="ui icon button defineFeeling">
-											<i class="book icon"></i>
-										</button>
-									</div>
-									<%= feeling.word %>
-								</div>
-						    <% } %>
-						<% }); %>
-					</div>
-					<div class="column">
-						<% feelings.forEach(function(feeling){ %>
-						    <% if(feeling.category === "joyful"){ %>
-						        <div class="column">
-									<div class="ui small basic icon buttons">
-										<button class="ui icon button selectFeeling">
-											<i class="radio icon"></i>
-										</button>
-										<button class="ui icon button defineFeeling">
-											<i class="book icon"></i>
-										</button>
-									</div>
-									<%= feeling.word %>
-								</div>
-						    <% } %>
-						<% }); %>
-					</div>
-					<div class="column">
-						<% feelings.forEach(function(feeling){ %>
-						    <% if(feeling.category === "powerful"){ %>
+						    <% if(feeling.category === "good"){ %>
 						        <div class="column">
 									<div class="ui small basic icon buttons">
 										<button class="ui icon button selectFeeling">
@@ -155,23 +127,6 @@
 						    <% } %>
 						<% }); %>
 					</div>
-					<div class="column">
-						<% feelings.forEach(function(feeling){ %>
-						    <% if(feeling.category === "good"){ %>
-						        <div class="column">
-									<div class="ui small basic icon buttons">
-										<button class="ui icon button selectFeeling">
-											<i class="radio icon"></i>
-										</button>
-										<button class="ui icon button defineFeeling">
-											<i class="book icon"></i>
-										</button>
-									</div>
-									<%= feeling.word %>
-								</div>
-						    <% } %>
-						<% }); %>
-					</div>
 				</div>
 			</div>
 		</div>
@@ -179,6 +134,9 @@
 		<div class="ui segments">
 			<h3 class="ui attached header">When do you feel this way?</h3>
 			<div class="ui attached segment">
+				<div class="ui fluid input">
+				 	<input value="when " type="text">
+				</div>
 				<!-- NVC p 52 -->
 			</div>
 		</div>
@@ -186,6 +144,9 @@
 		<div class="ui segments">
 			<h3 class="ui attached header">Why do you feel this way?</h3>
 			<div class="ui attached segment">
+				<div class="ui fluid input">
+				 	<input value="because " type="text">
+				</div>
 				<!-- NVC p 52, 57-->
 			</div>
 		</div>
@@ -193,6 +154,9 @@
 		<div class="ui segments">
 			<h3 class="ui attached header">What do you need?</h3>
 			<div class="ui attached segment">
+				<div class="ui fluid input">
+				 	<input value="I need " type="text">
+				</div>
 				<!-- NVC p 55		 -->
 			</div>
 		</div>
@@ -200,6 +164,9 @@
 		<div class="ui segments">
 			<h3 class="ui attached header">What do you request?</h3>
 			<div class="ui attached segment">
+				<div class="ui fluid input">
+				 	<input placeholder="I request" type="text">
+				</div>
 				<!-- NVC notes from Requests chapter -->
 			</div>
 		</div>		
@@ -214,12 +181,13 @@
 				Here it is.
 			</div>
 		</div>
+		
 			
 	<!--</div>-->
 		
 <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.js"></script>
-<script type="text/javascript" src="assets/js/main.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
 
 </body>
 </html>
