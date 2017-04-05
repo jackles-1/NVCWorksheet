@@ -22,7 +22,12 @@
 					<!--SAD-->
 					<div class="column">
 						<% feelings.forEach(function(feeling){ %>
-						    <% if(feeling.category === "sad"){ %>
+						    <% if(feeling.word === "sad"){ %>
+								<% include partials/headerFeeling %>
+						    <% } %>
+						<% }); %>
+						<% feelings.forEach(function(feeling){ %>
+						    <% if(feeling.category === "sad" && feeling.word !== "sad"){ %>
 								<% include partials/feeling %>
 						    <% } %>
 						<% }); %>
@@ -30,7 +35,12 @@
 					<!--MAD-->
 					<div class="column">
 						<% feelings.forEach(function(feeling){ %>
-						    <% if(feeling.category === "mad"){ %>
+						    <% if(feeling.word === "mad"){ %>
+								<% include partials/headerFeeling %>
+						    <% } %>
+						<% }); %>
+						<% feelings.forEach(function(feeling){ %>
+						    <% if(feeling.category === "mad" && feeling.word !== "mad"){ %>
 								<% include partials/feeling %>
 						    <% } %>
 						<% }); %>
@@ -38,7 +48,12 @@
 					<!--SCARED-->
 					<div class="column">
 						<% feelings.forEach(function(feeling){ %>
-						    <% if(feeling.category === "scared"){ %>
+						    <% if(feeling.word === "scared"){ %>
+								<% include partials/headerFeeling %>
+						    <% } %>
+						<% }); %>
+						<% feelings.forEach(function(feeling){ %>
+						    <% if(feeling.category === "scared" && feeling.word !== "scared"){ %>
 								<% include partials/feeling %>
 						    <% } %>
 						<% }); %>
@@ -46,7 +61,12 @@
 					<!--JOYFUL-->
 					<div class="column">
 						<% feelings.forEach(function(feeling){ %>
-						    <% if(feeling.category === "joyful"){ %>
+						    <% if(feeling.word === "joyful"){ %>
+								<% include partials/headerFeeling %>
+						    <% } %>
+						<% }); %>
+						<% feelings.forEach(function(feeling){ %>
+						    <% if(feeling.category === "joyful" && feeling.word !== "joyful"){ %>
 								<% include partials/feeling %>
 						    <% } %>
 						<% }); %>
@@ -54,7 +74,12 @@
 					<!--POWERFUL-->
 					<div class="column">
 						<% feelings.forEach(function(feeling){ %>
-						    <% if(feeling.category === "powerful"){ %>
+						    <% if(feeling.word === "powerful"){ %>
+								<% include partials/headerFeeling %>
+						    <% } %>
+						<% }); %>
+						<% feelings.forEach(function(feeling){ %>
+						    <% if(feeling.category === "powerful" && feeling.word !== "powerful"){ %>
 								<% include partials/feeling %>
 						    <% } %>
 						<% }); %>
@@ -62,7 +87,12 @@
 					<!--PEACEFUL-->
 					<div class="column">
 						<% feelings.forEach(function(feeling){ %>
-						    <% if(feeling.category === "peaceful"){ %>
+						    <% if(feeling.word === "peaceful"){ %>
+								<% include partials/headerFeeling %>
+						    <% } %>
+						<% }); %>
+						<% feelings.forEach(function(feeling){ %>
+						    <% if(feeling.category === "peaceful" && feeling.word !== "peaceful"){ %>
 								<% include partials/feeling %>
 						    <% } %>
 						<% }); %>
