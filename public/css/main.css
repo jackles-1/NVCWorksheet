@@ -1,11 +1,18 @@
-.check{
-	color: #4ddd65;
+#worksheetContainer{
+    margin: 3% 10% 3% 10%;
+}
+
+.headerFeeling{
+    font-weight: bold;
 }
 
 #partOfSpeech{
     font-style: italic;
 }
 
-.headerFeeling{
-    font-weight: bold;
+.check{
+	color: #45bc53;
 }
+
+
+
