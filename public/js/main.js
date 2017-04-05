@@ -5,8 +5,9 @@ $("button.selectFeeling").on("click", function(){
 });
 
 // Definition Button
-$("i.book").parent("button").on("click", function(){
-   $(this).find(".ui.modal").modal("show");
-   alert(word);
+$("button.defineFeeling").on("click", function(){
+   alert($(this).data("word"));
+   // $this.find("div.header").text(data-word);
+   // $(".ui.modal").modal("show");
 });
 
