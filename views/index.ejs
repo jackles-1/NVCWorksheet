@@ -19,105 +19,51 @@
 			<h3 class="ui top attached header">How do you feel?</h3>
 			<div class="ui attached segment">
 				<div class="ui six column grid">
-					<div class="column">
-						<% feelings.forEach(function(feeling){ %>
-						    <% if(feeling.category === "bad"){ %>
-						        <div class="column">
-									<div class="ui small basic icon buttons">
-										<button class="ui icon button selectFeeling">
-											<i class="radio icon"></i>
-										</button>
-										<button class="ui icon button defineFeeling" data-word="<%= feeling.word %>" data-definition="<%= feeling.definition %>" data-part-of-speech="<%= feeling.partOfSpeech %>">
-											<i class="book icon"></i>
-										</button>
-									</div>
-									<%= feeling.word %>
-								</div>
-						    <% } %>
-						<% }); %>
-					</div>
+					<!--SAD-->
 					<div class="column">
 						<% feelings.forEach(function(feeling){ %>
 						    <% if(feeling.category === "sad"){ %>
-						        <div class="column">
-									<div class="ui small basic icon buttons">
-										<button class="ui icon button selectFeeling">
-											<i class="radio icon"></i>
-										</button>
-										<button class="ui icon button defineFeeling" data-word="<%= feeling.word %>" data-definition="<%= feeling.definition %>" data-partofspeech="<%= feeling.partOfSpeech %>">
-											<i class="book icon"></i>
-										</button>
-									</div>
-									<%= feeling.word %>
-								</div>
+								<% include partials/feeling %>
 						    <% } %>
 						<% }); %>
 					</div>
+					<!--MAD-->
+					<div class="column">
+						<% feelings.forEach(function(feeling){ %>
+						    <% if(feeling.category === "mad"){ %>
+								<% include partials/feeling %>
+						    <% } %>
+						<% }); %>
+					</div>
+					<!--SCARED-->
 					<div class="column">
 						<% feelings.forEach(function(feeling){ %>
 						    <% if(feeling.category === "scared"){ %>
-						        <div class="column">
-									<div class="ui small basic icon buttons">
-										<button class="ui icon button selectFeeling">
-											<i class="radio icon"></i>
-										</button>
-										<button class="ui icon button defineFeeling" data-word="<%= feeling.word %>" data-definition="<%= feeling.definition %>">
-											<i class="book icon"></i>
-										</button>
-									</div>
-									<%= feeling.word %>
-								</div>
+								<% include partials/feeling %>
 						    <% } %>
 						<% }); %>
 					</div>
+					<!--JOYFUL-->
 					<div class="column">
 						<% feelings.forEach(function(feeling){ %>
-						    <% if(feeling.category === "ignored"){ %>
-						        <div class="column">
-									<div class="ui small basic icon buttons">
-										<button class="ui icon button selectFeeling">
-											<i class="radio icon"></i>
-										</button>
-										<button class="ui icon button defineFeeling" data-word="<%= feeling.word %>" data-definition="<%= feeling.definition %>">
-											<i class="book icon"></i>
-										</button>
-									</div>
-									<%= feeling.word %>
-								</div>
+						    <% if(feeling.category === "joyful"){ %>
+								<% include partials/feeling %>
 						    <% } %>
 						<% }); %>
 					</div>
+					<!--POWERFUL-->
 					<div class="column">
 						<% feelings.forEach(function(feeling){ %>
-						    <% if(feeling.category === "good"){ %>
-						        <div class="column">
-									<div class="ui small basic icon buttons">
-										<button class="ui icon button selectFeeling">
-											<i class="radio icon"></i>
-										</button>
-										<button class="ui icon button defineFeeling" data-word="<%= feeling.word %>" data-definition="<%= feeling.definition %>">
-											<i class="book icon"></i>
-										</button>
-									</div>
-									<%= feeling.word %>
-								</div>
+						    <% if(feeling.category === "powerful"){ %>
+								<% include partials/feeling %>
 						    <% } %>
 						<% }); %>
 					</div>
+					<!--PEACEFUL-->
 					<div class="column">
 						<% feelings.forEach(function(feeling){ %>
 						    <% if(feeling.category === "peaceful"){ %>
-						        <div class="column">
-									<div class="ui small basic icon buttons">
-										<button class="ui icon button selectFeeling">
-											<i class="radio icon"></i>
-										</button>
-										<button class="ui icon button defineFeeling" data-word="<%= feeling.word %>" data-definition="<%= feeling.definition %>">
-											<i class="book icon"></i>
-										</button>
-									</div>
-									<%= feeling.word %>
-								</div>
+								<% include partials/feeling %>
 						    <% } %>
 						<% }); %>
 					</div>

@@ -6,14 +6,15 @@ var Feeling = require("./models/feeling");
 var data = [
         {
             word: "sad",
-            definition: "1. affected by unhappiness or grief; sorrowful or mournful<br><br>2. expressive of or characterized by sorrow", 
+            definition: "1. affected by unhappiness or grief; sorrowful or mournful.<br><br>2. expressive of or characterized by sorrow.", 
             category: "sad",
             partOfSpeech: "adjective"
         },
         {
             word: "sleepy",
-            definition: "", 
-            category: "sad"
+            definition: "1. ready or inclined to sleep; drowsy.<br><br>2. of or showing drowsiness.<br><br>3. lethargic; sluggish.", 
+            category: "sad",
+            partOfSpeech: "adjective"
         },
         {
             word: "tired",
@@ -1034,7 +1035,7 @@ var data = [
         {
             word: "abandoned",
             definition: "", 
-            category: "ignored"
+            category: "sad"
         },
         {
             word: "afraid",
