@@ -6,8 +6,12 @@ $("button.selectFeeling").on("click", function(){
 
 // Definition Button
 $("button.defineFeeling").on("click", function(){
-   alert($(this).data("word"));
-   // $this.find("div.header").text(data-word);
-   // $(".ui.modal").modal("show");
+   var word = $(this).data("word");
+   var definition = $(this).data("definition");
+   var partOfSpeech = $(this).data("partofspeech");
+   $("div.ui.modal div.header").text(word);
+   $("#definition").html(definition);
+   $("#partOfSpeech").text(partOfSpeech);
+   $(".ui.modal").modal("show");   
 });
 

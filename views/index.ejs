@@ -27,7 +27,7 @@
 										<button class="ui icon button selectFeeling">
 											<i class="radio icon"></i>
 										</button>
-										<button class="ui icon button defineFeeling">
+										<button class="ui icon button defineFeeling" data-word="<%= feeling.word %>" data-definition="<%= feeling.definition %>" data-part-of-speech="<%= feeling.partOfSpeech %>">
 											<i class="book icon"></i>
 										</button>
 									</div>
@@ -44,7 +44,7 @@
 										<button class="ui icon button selectFeeling">
 											<i class="radio icon"></i>
 										</button>
-										<button class="ui icon button defineFeeling">
+										<button class="ui icon button defineFeeling" data-word="<%= feeling.word %>" data-definition="<%= feeling.definition %>" data-partofspeech="<%= feeling.partOfSpeech %>">
 											<i class="book icon"></i>
 										</button>
 									</div>
@@ -61,7 +61,7 @@
 										<button class="ui icon button selectFeeling">
 											<i class="radio icon"></i>
 										</button>
-										<button class="ui icon button defineFeeling">
+										<button class="ui icon button defineFeeling" data-word="<%= feeling.word %>" data-definition="<%= feeling.definition %>">
 											<i class="book icon"></i>
 										</button>
 									</div>
@@ -78,7 +78,7 @@
 										<button class="ui icon button selectFeeling">
 											<i class="radio icon"></i>
 										</button>
-										<button class="ui icon button defineFeeling">
+										<button class="ui icon button defineFeeling" data-word="<%= feeling.word %>" data-definition="<%= feeling.definition %>">
 											<i class="book icon"></i>
 										</button>
 									</div>
@@ -95,19 +95,11 @@
 										<button class="ui icon button selectFeeling">
 											<i class="radio icon"></i>
 										</button>
-										<button class="ui icon button defineFeeling" data-word="<%= feeling.word %>">
+										<button class="ui icon button defineFeeling" data-word="<%= feeling.word %>" data-definition="<%= feeling.definition %>">
 											<i class="book icon"></i>
 										</button>
 									</div>
 									<%= feeling.word %>
-									<!--MODAL-->
-									<div class="ui modal">
-										<div class="header"></div>
-										<div class="content">
-											<p data-definition="<%= feeling.definition %>"></p>
-										</div>
-									</div>
-									<!--MODAL-->
 								</div>
 						    <% } %>
 						<% }); %>
@@ -120,7 +112,7 @@
 										<button class="ui icon button selectFeeling">
 											<i class="radio icon"></i>
 										</button>
-										<button class="ui icon button defineFeeling">
+										<button class="ui icon button defineFeeling" data-word="<%= feeling.word %>" data-definition="<%= feeling.definition %>">
 											<i class="book icon"></i>
 										</button>
 									</div>
@@ -183,7 +175,16 @@
 				Here it is.
 			</div>
 		</div>
-		
+	
+		<!--MODAL-->
+		<div class="ui modal">
+			<div class="header"></div>
+			<div class="content">
+				<p id="partOfSpeech"></p>
+				<p id="definition"></p>
+			</div>
+		</div>
+		<!--MODAL-->
 			
 	<!--</div>-->
 		
