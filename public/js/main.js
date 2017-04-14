@@ -1,10 +1,14 @@
 var finalStatement;
 var feelingsArray = [];
-var feelingsStatement;
+var feelingsStatement = "";
+var whenStatement = "";
+var becauseStatement = "";
+var needStatement = "";
+var requestStatement = "";
 var numFeelings = 0;
 
 // Select Button
-$("button.selectFeeling").on("click", function(){
+$("button.selectFeeling").click(function(){
    var word = $(this).data("word");
    
    $(this).find("i").toggleClass("radio") ;
@@ -21,7 +25,7 @@ $("button.selectFeeling").on("click", function(){
 });
 
 // Definition Button
-$("button.defineFeeling").on("click", function(){
+$("button.defineFeeling").click(function(){
    var word = $(this).data("word");
    var definition = $(this).data("definition");
    var partOfSpeech = $(this).data("partofspeech");
@@ -32,6 +36,28 @@ $("button.defineFeeling").on("click", function(){
    $(".ui.modal").modal("show");   
 });
 
+$("div#when input").blur(function(){
+   whenStatement = $(this).val();
+   updateFinalStatement();
+   $("div#because p").text(finalStatement);
+});
+
+$("div#because input").blur(function(){
+   whenStatement = $(this).val();
+   updateFinalStatement();
+   $("div#need p").text(finalStatement);
+});
+
+$("div#need input").blur(function(){
+   needStatement = $(this).val();
+   updateFinalStatement();
+   $("div#request p").text(finalStatement);
+});
+
+$("div#request input").blur(function(){
+   needStatement = $(this).val();
+   updateFinalStatement();
+});
 
 function updateFeelings(word, add){
    // Update feelingsArray
@@ -52,18 +78,38 @@ function updateFeelings(word, add){
    }
    else if(feelingsArray.length > 2){
       feelingsStatement = "I feel ";
-      for(i = 0; i < (feelingsArray.length - 2); i++){
+      for(var i = 0; i < (feelingsArray.length - 2); i++){
          feelingsStatement += feelingsArray[i] + ", ";
       }
       feelingsStatement += feelingsArray[feelingsArray.length - 2] + ", and " + feelingsArray[feelingsArray.length - 1];
    }
    
+   $("div#when p").text(feelingsStatement);
+   
    updateFinalStatement();
-};
+}
 
 function updateFinalStatement(){
-   finalStatement = feelingsStatement;
+   // BOTH OF THE FOLLOWING SECTIONS AREN'T WORKING
+   // If whenStatement ends in ".", and becauseStatement starts with "because", capitalize "because".
+   if(whenStatement.substr(-1) === "." && becauseStatement.substring(0, 7) === "because"){
+      becauseStatement = becauseStatement.charAt(0).toUpperCase() + becauseStatement.slice(1)
+   }
+   
+   // Add a "." at the end of the last three statements if not already present.
+   if(becauseStatement.substr(-1) !== "." && becauseStatement != ""){
+      becauseStatement = becauseStatement + ".";
+   }
+   if(needStatement.substr(-1) !== "." && needStatement != ""){
+      needStatement = needStatement + ".";
+   }
+   if(requestStatement.substr(-1) !== "." && becauseStatement != ""){
+      requestStatement = requestStatement + ".";
+   }
+   
+   finalStatement = feelingsStatement + " " + whenStatement + " " + becauseStatement + " " + needStatement + " " + requestStatement;
+   
    $("#finalStatement").text(finalStatement);
-};
+}
 
 

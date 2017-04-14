@@ -1,3 +1,16 @@
+html{
+    min-height: 100%;
+}
+
+body{
+	background-image: url(../img/pololu.JPG);
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
 #worksheetContainer{
     margin: 3% 10% 3% 10%;
 }
