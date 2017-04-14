@@ -14,12 +14,10 @@ $("button.selectFeeling").click(function(){
    $(this).find("i").toggleClass("radio") ;
    if($(this).find("i").hasClass("check")){
       $(this).find("i").removeClass("check circle outline")
-      console.log("remove");
       updateFeelings(word, false);      
    }
    else{
       $(this).find("i").addClass("check circle outline")
-      console.log("add");
       updateFeelings(word, true)
    }
 });
@@ -36,16 +34,28 @@ $("button.defineFeeling").click(function(){
    $(".ui.modal").modal("show");   
 });
 
+// Text Inputs
 $("div#when input").blur(function(){
    whenStatement = $(this).val();
    updateFinalStatement();
    $("div#because p").text(finalStatement);
+   
+   if(needStatement !== "" && needStatement !== "I need "){
+      $("div#need p").text(finalStatement);
+   }
+   if(requestStatement !== ""){
+      $("div#request p").text(finalStatement);
+   }
 });
 
 $("div#because input").blur(function(){
-   whenStatement = $(this).val();
+   becauseStatement = $(this).val();
    updateFinalStatement();
    $("div#need p").text(finalStatement);
+   
+   if(requestStatement !== ""){
+      $("div#request p").text(finalStatement);
+   }
 });
 
 $("div#need input").blur(function(){
@@ -55,7 +65,7 @@ $("div#need input").blur(function(){
 });
 
 $("div#request input").blur(function(){
-   needStatement = $(this).val();
+   requestStatement = $(this).val();
    updateFinalStatement();
 });
 
@@ -90,21 +100,33 @@ function updateFeelings(word, add){
 }
 
 function updateFinalStatement(){
-   // BOTH OF THE FOLLOWING SECTIONS AREN'T WORKING
    // If whenStatement ends in ".", and becauseStatement starts with "because", capitalize "because".
+   console.log("whenStatement: " + whenStatement);
+   
    if(whenStatement.substr(-1) === "." && becauseStatement.substring(0, 7) === "because"){
-      becauseStatement = becauseStatement.charAt(0).toUpperCase() + becauseStatement.slice(1)
+      becauseStatement = becauseStatement.charAt(0).toUpperCase() + becauseStatement.slice(1);
+      becauseInput = becauseStatement;
+      console.log("Inside when");
+   }
+   if(whenStatement.substr(-1) !== "."){
+      becauseStatement = becauseStatement.charAt(0).toLowerCase() + becauseStatement.slice(1);
    }
    
    // Add a "." at the end of the last three statements if not already present.
-   if(becauseStatement.substr(-1) !== "." && becauseStatement != ""){
-      becauseStatement = becauseStatement + ".";
+   console.log("becauseStatement: " + becauseStatement);
+   if(becauseStatement.substr(-1) !== "." && becauseStatement !== "because " && becauseStatement !== ""){
+      $("div#because input").val(becauseStatement + ".");
+      console.log("Inside because;")
    }
-   if(needStatement.substr(-1) !== "." && needStatement != ""){
+   console.log("needStatement: " + needStatement);
+   if(needStatement.substr(-1) !== "." && needStatement !== "I need " && needStatement !== ""){
       needStatement = needStatement + ".";
+      console.log("In need");
    }
-   if(requestStatement.substr(-1) !== "." && becauseStatement != ""){
+   console.log("requestStatement: " + requestStatement);
+   if(requestStatement.substr(-1) !== "." && requestStatement !== ""){
       requestStatement = requestStatement + ".";
+      console.log("Inside request");
    }
    
    finalStatement = feelingsStatement + " " + whenStatement + " " + becauseStatement + " " + needStatement + " " + requestStatement;

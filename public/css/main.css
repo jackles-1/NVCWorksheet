@@ -3,7 +3,10 @@ html{
 }
 
 body{
-	background-image: url(../img/pololu.JPG);
+	background: /*linear-gradient(
+			rgba(0, 0, 0, 0.5),
+			rgba(0, 0, 0, 0.5)
+		),*/ url(../img/ocean.JPG);
 	background-size: cover;
 	background-position: center;
 	height: 100%;
@@ -25,6 +28,10 @@ body{
 
 .check{
 	color: #45bc53;
+}
+
+.yourStatement{
+	color: #d8d8d8;
 }
 
 
