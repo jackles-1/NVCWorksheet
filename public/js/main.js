@@ -103,7 +103,7 @@ function updateFinalStatement(){
    // If whenStatement ends in ".", and becauseStatement starts with "because", capitalize "because".
    console.log("whenStatement: " + whenStatement);
    
-   if(whenStatement.substr(-1) === "." && becauseStatement.substring(0, 7) === "because"){
+   if(whenStatement.substr(-1) === "." && becauseStatement.substring(0, 9) === "because I"){
       becauseStatement = becauseStatement.charAt(0).toUpperCase() + becauseStatement.slice(1);
       becauseInput = becauseStatement;
       console.log("Inside when");
@@ -114,7 +114,7 @@ function updateFinalStatement(){
    
    // Add a "." at the end of the last three statements if not already present.
    console.log("becauseStatement: " + becauseStatement);
-   if(becauseStatement.substr(-1) !== "." && becauseStatement !== "because " && becauseStatement !== ""){
+   if(becauseStatement.substr(-1) !== "." && becauseStatement !== "because I " && becauseStatement !== ""){
       $("div#because input").val(becauseStatement + ".");
       console.log("Inside because;")
    }

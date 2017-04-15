@@ -34,5 +34,22 @@ body{
 	color: #d8d8d8;
 }
 
+.pageNumber{
+	font-weight: bold;
+	float: right;
+}
+
+#right{
+	float: right;
+	margin-right: 80px;
+}
+
+table{
+	text-align: left;
+}
+
+ul{
+	font-weight: normal;
+}
 
 
