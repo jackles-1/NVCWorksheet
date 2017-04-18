@@ -4,6 +4,7 @@ var express = require("express"),
 	bodyParser = require("body-parser"),
 	mongoose = require("mongoose"),
 	expressSanitizer = require("express-sanitizer"),
+	request = require("request"),
 // Models
 	Feeling = require("./models/feeling"),
 	seedDB = require("./seeds");

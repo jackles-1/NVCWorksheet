@@ -134,4 +134,20 @@ function updateFinalStatement(){
    $("#finalStatement").text(finalStatement);
 }
 
+// OXFORD DICTIONARIES API--FOR FEELING DEFINITIONS
+request("https://od-api.oxforddictionaries.com:443/api/v1/entries/en/squirrel/definitions", function(error, response, body){
+   console.log("in request");
+   if(error){
+      console.log(error);
+   }
+   else{
+      console.log("in else outside of if");
+      if(response.statusCode == 200){
+         var parsedData = JSON.parse(body);
+         console.log(parsedData["results"]["lexicalEntries"]["senses"]["definitions"]);
+         console.log("here");
+      }
+   }
+});
+
 
