@@ -5,6 +5,7 @@ var express = require("express"),
 	mongoose = require("mongoose"),
 	expressSanitizer = require("express-sanitizer"),
 	request = require("request"),
+	curl = require("curl"),
 // Models
 	Feeling = require("./models/feeling"),
 	seedDB = require("./seeds");
@@ -30,10 +31,54 @@ app.get("/", function(req, res){
 			console.log("Error in root route.");
 		}	
 		else{
-			res.render("index", {feelings: feelings});
+			if(req.xhr){
+				console.log("In xhr");
+				request("https://od-api.oxforddictionaries.com:443/api/v1/entries/en/squirrel/definitions", function(error, response, body){
+					if(error){
+					      console.log(error);
+					  }
+					  else{
+					      console.log("in else outside of if");
+					      if(response.statusCode == 200){
+					         var parsedData = JSON.parse(body);
+					         console.log(req.body.data);
+					         console.log(parsedData["results"]["lexicalEntries"]["senses"]["definitions"]);
+					         console.log("here");
+					      }
+					  }
+					});
+			}
+			else{
+				console.log("In else");
+				res.render("index", {feelings: feelings});
+			}
 		}
 	});
 });
+
+app.get("/test", function(req, res){
+	res.render("testForm");
+});
+
+app.get("/return", function(req, res){
+    var word = req.query.word;
+    var url = "https://od-api.oxforddictionaries.com:443/api/v1/entries/en/" + word + "/definitions";
+
+	// curl.getJSON();
+
+    // request(url, function(error, response, body){
+    //   if(!error && response.statusCode == 200){
+  		// console.log("HERE");
+    // 	var data = JSON.parse(body);
+    // 	res.render("testResults");
+    //   } 
+    // });
+});
+
+// curl.getJSON(url, options, function(err, response, data){});
+
+// curl -X GET --header "Accept: application/json" --header "app_id: 27cbefc7" --header "app_key: 28e729879e8883e9f98656fc88430520" 
+// "https://od-api.oxforddictionaries.com:443/api/v1/entries/en/ace"
 
 // Listener
 app.listen(process.env.PORT, process.env.IP, function(){

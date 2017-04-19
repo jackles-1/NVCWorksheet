@@ -101,32 +101,24 @@ function updateFeelings(word, add){
 
 function updateFinalStatement(){
    // If whenStatement ends in ".", and becauseStatement starts with "because", capitalize "because".
-   console.log("whenStatement: " + whenStatement);
    
    if(whenStatement.substr(-1) === "." && becauseStatement.substring(0, 9) === "because I"){
       becauseStatement = becauseStatement.charAt(0).toUpperCase() + becauseStatement.slice(1);
       becauseInput = becauseStatement;
-      console.log("Inside when");
    }
    if(whenStatement.substr(-1) !== "."){
       becauseStatement = becauseStatement.charAt(0).toLowerCase() + becauseStatement.slice(1);
    }
    
    // Add a "." at the end of the last three statements if not already present.
-   console.log("becauseStatement: " + becauseStatement);
    if(becauseStatement.substr(-1) !== "." && becauseStatement !== "because I " && becauseStatement !== ""){
       $("div#because input").val(becauseStatement + ".");
-      console.log("Inside because;")
    }
-   console.log("needStatement: " + needStatement);
    if(needStatement.substr(-1) !== "." && needStatement !== "I need " && needStatement !== ""){
       needStatement = needStatement + ".";
-      console.log("In need");
    }
-   console.log("requestStatement: " + requestStatement);
    if(requestStatement.substr(-1) !== "." && requestStatement !== ""){
       requestStatement = requestStatement + ".";
-      console.log("Inside request");
    }
    
    finalStatement = feelingsStatement + " " + whenStatement + " " + becauseStatement + " " + needStatement + " " + requestStatement;
@@ -134,20 +126,6 @@ function updateFinalStatement(){
    $("#finalStatement").text(finalStatement);
 }
 
-// OXFORD DICTIONARIES API--FOR FEELING DEFINITIONS
-request("https://od-api.oxforddictionaries.com:443/api/v1/entries/en/squirrel/definitions", function(error, response, body){
-   console.log("in request");
-   if(error){
-      console.log(error);
-   }
-   else{
-      console.log("in else outside of if");
-      if(response.statusCode == 200){
-         var parsedData = JSON.parse(body);
-         console.log(parsedData["results"]["lexicalEntries"]["senses"]["definitions"]);
-         console.log("here");
-      }
-   }
-});
+
 
 
