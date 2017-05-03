@@ -80,7 +80,10 @@ function updateFeelings(word, add){
    }
    
    // Update feelingsStatement
-   if(feelingsArray.length === 1){
+   if(feelingsArray.length === 0){
+      feelingsStatement = "";
+   }
+   else if(feelingsArray.length === 1){
       feelingsStatement = "I feel " + feelingsArray[0];
    }
    else if(feelingsArray.length === 2){
@@ -110,15 +113,21 @@ function updateFinalStatement(){
       becauseStatement = becauseStatement.charAt(0).toLowerCase() + becauseStatement.slice(1);
    }
    
-   // Add a "." at the end of the last three statements if not already present.
-   if(becauseStatement.substr(-1) !== "." && becauseStatement !== "because I " && becauseStatement !== ""){
+   // Add a "." at the end of the last three statements if ending punctuation not already present.
+   var becauseEnd = becauseStatement.substr(-1);
+   if(becauseEnd !== "." && becauseEnd !== "?" && becauseEnd !== "!" && becauseStatement !== "because I " && becauseStatement !== ""){
       $("div#because input").val(becauseStatement + ".");
    }
-   if(needStatement.substr(-1) !== "." && needStatement !== "I need " && needStatement !== ""){
+   
+   var needEnd = needStatement.substr(-1);
+   if(needEnd !== "." && needEnd !== "?" && needEnd !== "!" && needStatement !== "I need " && needStatement !== ""){
       needStatement = needStatement + ".";
    }
-   if(requestStatement.substr(-1) !== "." && requestStatement !== ""){
+   
+   var requestEnd = requestStatement.substr(-1)
+   if(requestEnd !== "." && requestEnd !== "?" && requestEnd !== "!" && requestStatement !== ""){
       requestStatement = requestStatement + ".";
+      console.log ("in here");
    }
    
    finalStatement = feelingsStatement + " " + whenStatement + " " + becauseStatement + " " + needStatement + " " + requestStatement;
