@@ -18,11 +18,12 @@
   "homepage": "https://github.com/jackles-1/NVCWorksheet#readme",
   "dependencies": {
     "body-parser": "^1.17.1",
-    "curl": "^0.1.4",
     "ejs": "^2.5.6",
     "express": "^4.15.2",
     "express-sanitizer": "^1.0.2",
     "mongoose": "^4.9.2",
+    "oxford-dictionary-api": "^1.0.1",
+    "querystring": "^0.2.0",
     "request": "^2.81.0"
   }
 }
