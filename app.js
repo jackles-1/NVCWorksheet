@@ -80,7 +80,6 @@ app.get("/results", function(req, res){
     		console.log("err: " + err);
     	}	
     	else{
-    		console.log("data: " + data);
 			res.render("testResults", {data: data});
 		}
     });

@@ -1,11 +1,14 @@
-<h1>Test Results</h1>
-
-<%= data %>
-
-<br>
-<br>
-
-<%= data["results"] %>
+<% data["results"].forEach(function(part){ %>
+    <h1><%= part["id"] %></h1>
+    <% part["lexicalEntries"].forEach(function(lexicalEntryPart){ %>
+        <% lexicalEntryPart["entries"].forEach(function(entryPart){ %> 
+            <h3>Sense</h3>
+            <%= JSON.stringify(entryPart["senses"][0]["definitions"][0]) %>
+        <h3>Part of Speech</h3>
+        <%= lexicalEntryPart["lexicalCategory"] %>
+        <% }); %>
+    <% }); %>
+<% }); %>
 
 <br>
 <br>
