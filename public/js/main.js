@@ -28,6 +28,11 @@ $("button.defineFeeling").click(function(){
    var definition = $(this).data("definition");
    var partOfSpeech = $(this).data("partofspeech");
    
+   //Get definition from Oxford Dictionary for modal
+   $.get("/", function(dictionaryResult){
+      debugger;
+   });
+   
    $("div.ui.modal div.header").text(word);
    $("#definition").html(definition);
    $("#partOfSpeech").text(partOfSpeech);

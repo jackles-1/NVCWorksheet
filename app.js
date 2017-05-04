@@ -41,27 +41,22 @@ app.get("/", function(req, res){
 			console.log("Error in root route.");
 		}	
 		else{
-			// if(req.xhr){
-			// 	console.log("In xhr");
-			// 	request("https://od-api.oxforddictionaries.com:443/api/v1/entries/en/squirrel/definitions", function(error, response, body){
-			// 		if(error){
-			// 		      console.log(error);
-			// 		  }
-			// 		  else{
-			// 		      console.log("in else outside of if");
-			// 		      if(response.statusCode == 200){
-			// 		         var parsedData = JSON.parse(body);
-			// 		         console.log(req.body.data);
-			// 		         console.log(parsedData["results"]["lexicalEntries"]["senses"]["definitions"]);
-			// 		         console.log("here");
-			// 		      }
-			// 		  }
-			// 		});
-			// }
-			// else{
-			// 	console.log("In else");
-				res.render("index", {feelings: feelings});
-			//}
+			if(req.xhr){
+				var word = req.body.word;
+				console.log("word: " + word);
+				dict.find(word, function(err, data){
+			    	console.log("Inside dict.find");
+			    	if(err){
+			    		console.log("err: " + err);
+			    	}	
+			    	else{
+						res.json();
+					}
+			    });
+			}
+			else{
+				res.render("index", {feelings: feelings});	
+			}
 		}
 	});
 });

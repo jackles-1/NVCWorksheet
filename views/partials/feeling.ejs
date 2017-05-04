@@ -3,9 +3,11 @@
 		<button class="ui icon button selectFeeling" data-word="<%= feeling.word %>">
 			<i class="radio icon"></i>
 		</button>
-		<button class="ui icon button defineFeeling" data-word="<%= feeling.word %>" data-definition="<%= feeling.definition %>" data-partofspeech="<%= feeling.partOfSpeech %>">
-			<i class="book icon"></i>
-		</button>
+		<a href="/">
+			<button name="<%= feeling.word %>" class="ui icon button defineFeeling" data-word="<%= feeling.word %>" data-definition="<%= feeling.definition %>" data-partofspeech="<%= feeling.partOfSpeech %>">
+				<i class="book icon"></i>
+			</button>
+		</a>
 	</div>
 	<%= feeling.word %>
 </div>
